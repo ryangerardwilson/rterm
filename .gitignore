@@ -1,0 +1,33 @@
+# Build directory and its contents
+build/*
+# Specifically ignore the executable in build/
+build/gnome-terminal-clone
+
+# CMake generated files (sometimes these might appear in root)
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+install_manifest.txt
+
+# Object files and libraries
+*.o
+*.a
+*.so
+
+# Virtual environment directories (just in case one gets created here)
+Venv/
+venv/
+env/
+.venv/
+
+# Temporary editor files
+*.swp
+*~
+*.bak
+
+# Keep source and config files (implicitly)
+# src/ (no need to explicitly include)
+# CMakeLists.txt (no need to explicitly include)
+# build.sh (no need to explicitly include)
