@@ -17,5 +17,6 @@ add_executable(gnome-terminal-clone
     src/terminal.c 
     src/radial_menu_ui.c 
     src/radial_menu_controller.c
+    src/utils.c          # Added
 )
 target_link_libraries(gnome-terminal-clone ${GTK4_LIBRARIES} ${VTE_LIBRARIES} ${GLIB_LIBRARIES} m)
