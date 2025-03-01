@@ -12,6 +12,7 @@ void radial_menu_ui_setup(AppData *app_data) {
     gtk_drawing_area_set_draw_func(GTK_DRAWING_AREA(app_data->radial_menu),
                                    utils_radial_menu_ui_setup_draw_radial_menu, app_data, NULL);
 
+    // Add radial menu as the last overlay to ensure it’s on top
     gtk_overlay_add_overlay(GTK_OVERLAY(app_data->window), app_data->radial_menu);
     gtk_widget_set_visible(app_data->radial_menu, FALSE);
 
@@ -37,7 +38,7 @@ void radial_menu_ui_toggle(AppData *app_data) {
 }
 
 void radial_menu_ui_update(AppData *app_data) {
-    if (app_data->radial_menu) {
+    if (app_data->radial_menu && gtk_widget_get_visible(app_data->radial_menu)) {
         gtk_widget_queue_draw(app_data->radial_menu);
     }
 }

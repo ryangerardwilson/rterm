@@ -9,6 +9,8 @@
 typedef struct {
   GtkWidget *terminal;
   char *label;
+  VtePty *pty;
+  GPid pid;
   gpointer user_data;
 } TerminalTab;
 
@@ -19,6 +21,7 @@ typedef struct {
   GtkApplication *app;
   GtkWidget *radial_menu;
   int active_tab_index;
+  GtkWidget *terminal_container; // New field for terminal container
 } AppData;
 
 typedef struct {
